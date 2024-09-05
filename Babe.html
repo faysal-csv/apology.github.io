@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Apology to You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #e55b50;
+        }
+        .icon {
+            font-size: 24px;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>❤️ To My Dearest Swetie ❤️</h1>
+        <div id="page1" class="page active">
+            <p>I am truly sorry for the pain and tears that I've caused with my words and actions. I deeply regret my choice of words and the sadness they brought to you.</p>
+            <a href="#" class="button" onclick="showPage('page2')">Next ➡️</a>
+        </div>
+        <div id="page2" class="page">
+            <p>You mean more to me than anything in this world. I want you to know that I will always love you more deeply and more genuinely with each passing day.</p>
+            <a href="#" class="button" onclick="showPage('page3')">Next ➡️</a>
+            <a href="#" class="button" onclick="showPage('page1')">Back ⬅️</a>
+        </div>
+        <div id="page3" class="page">
+            <p>Babyy, I really apologize for my mistakes. I will make things right and ensure you feel cherished and valued.</p>
+            <a href="#" class="button" onclick="showPage('page4')">Next ➡️</a>
+            <a href="#" class="button" onclick="showPage('page2')">Back ⬅️</a>
+        </div>
+        <div id="page4" class="page">
+            <p>My love for you is boundless and grows stronger every day. You are my everything.</p>
+            <a href="#" class="button" onclick="showPage('page5')">Next ➡️</a>
+            <a href="#" class="button" onclick="showPage('page3')">Back ⬅️</a>
+        </div>
+        <div id="page5" class="page">
+            <p>I love you Babyy</p>
+            <a href="#" class="button" onclick="showPage('page4')">Back ⬅️</a>
+        </div>
+    </div>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
